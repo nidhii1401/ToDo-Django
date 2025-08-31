@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO LIST - Home</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLp3iR66X53X1w5B4x0L+E4x1Q8/1xL4gD+B6s/1G8x5xGz0gqN6n0R7jF0jA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .card {
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .task-list {
+            max-height: 450px;
+            overflow-y: auto;
+        }
+        .completed-task {
+            text-decoration: line-through;
+            color: #6c757d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container py-5">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <h1 class="text-center mb-4">Django ToDo App</h1>
+                <p class="text-center text-muted">{% now "jS F Y" %}</p>
+                
+                <div class="card p-4 mb-4">
+                    <h5 class="card-title">My Day</h5>
+                    <div class="task-list mb-3">
+                        <div class="list-group">
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>This is some Task</span>
+                                <div class="btn-group" role="group">
+                                    <a class="btn btn-sm btn-outline-success"><i class="fas fa-check"></i></a>
+                                    <a class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></a>
+                                    <a class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></a>
+                                </div>
+                            </div>
+                            <div class="list-group-item d-flex justify-content-between align-items-center">
+                                <span>Another incomplete task</span>
+                                <div class="btn-group" role="group">
+                                    <a class="btn btn-sm btn-outline-success"><i class="fas fa-check"></i></a>
+                                    <a class="btn btn-sm btn-outline-primary"><i class="fas fa-edit"></i></a>
+                                    <a class="btn btn-sm btn-outline-danger"><i class="fas fa-trash"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h5 class="card-title">Completed Tasks</h5>
+                    <div class="list-group">
+                        <div class="list-group-item list-group-item-success d-flex justify-content-between align-items-center completed-task">
+                            <span>This is the completed task.</span>
+                            <div>
+                                <a class="btn btn-sm btn-outline-secondary"><i class="fas fa-redo"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card p-4">
+                    <form action="" class="d-flex">
+                        <input type="text" class="form-control me-2" placeholder="Add a new task">
+                        <button type="submit" class="btn btn-primary"><i class="fas fa-plus me-1"></i>Add</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html> 
