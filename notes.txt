@@ -1,8 +1,1 @@
-Creating a virtual environment - python -m venv <env_name>
-Activating the VE - source <env_name>/Scripts/activate
-
-Install Django - pip install django
-Verify - pip freeze
-
-Creating a project - django-admin startproject <project_name> .
-Migration - python manage.py migrate
+...
