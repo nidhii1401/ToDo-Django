@@ -1,4 +1,3 @@
-from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from . models import Task
 
@@ -27,7 +26,7 @@ def edit_task(request, pk):
     get_task = get_object_or_404(Task, pk=pk)
     if request.method == 'POST':
         new_task = request.POST['task']
-        print(new_task) 
+        # print(new_task) 
         get_task.task = new_task
         get_task.save()
         return redirect('home')
